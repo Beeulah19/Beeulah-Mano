@@ -13,8 +13,9 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <img src="./assets/beeulah-logo.png" alt="logo" />
+    <img src="./assets/beeulah-logo.svg" alt="logo" />
   </a>
+
   <ul class="nav-links">
     <li><a href="#works">Selected Work</a></li>
     <li><a href="#career">Experience</a></li>
@@ -22,7 +23,33 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#" class="nav-resume">Resume</a></li>
   </ul>
+
+  <!-- HAMBURGER BUTTON -->
+  <button class="nav-hamburger" id="navHamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- RIGHT DRAWER -->
+<div class="nav-drawer" id="navDrawer">
+
+  <button class="nav-drawer-close" id="navDrawerClose">
+    ✕
+  </button>
+
+  <ul class="nav-drawer-links">
+    <li><a href="#works">Selected Work</a></li>
+    <li><a href="#career">Experience</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -127,6 +154,7 @@
       </div>
     </div>
   </div>
+
 </section>
 
 <!-- ABOUT ME -->
@@ -177,19 +205,19 @@
         <p class="skill-cell">Data Interpretation</p><p class="skill-cell">Ethical &amp; Inclusive Design</p>
       </div>
       <div class="tools-grid">
-        <div class="tool-pill" title="Figma"><svg width="18" height="18" viewBox="0 0 38 57" fill="none"><rect x="0" y="0" width="19" height="19" rx="9.5" fill="#F24E1E"/><rect x="19" y="0" width="19" height="19" rx="9.5" fill="#FF7262"/><rect x="0" y="19" width="19" height="19" rx="9.5" fill="#A259FF"/><rect x="0" y="38" width="19" height="19" rx="9.5" fill="#0ACF83"/><circle cx="28.5" cy="28.5" r="9.5" fill="#1ABCFE"/></svg></div>
-        <div class="tool-pill" title="Framer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v8H4V4zm0 8h8l8 8H4v-8z" fill="#0055FF"/></svg></div>
-        <div class="tool-pill" title="Notion"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#fff"/><text x="20" y="72" font-size="60" font-family="Georgia,serif" font-weight="900" fill="#111">N</text></svg></div>
-        <div class="tool-pill" title="After Effects"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#00005B"/><text x="8" y="72" font-size="48" font-weight="900" fill="#9999FF" font-family="Arial,sans-serif">Ae</text></svg></div>
-        <div class="tool-pill" title="Illustrator"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#330000"/><text x="10" y="72" font-size="48" font-weight="900" fill="#FF9A00" font-family="Arial,sans-serif">Ai</text></svg></div>
-        <div class="tool-pill" title="ProtoPie"><svg width="18" height="18" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#FF3C5F"/><polygon points="38,28 76,50 38,72" fill="#fff"/></svg></div>
-        <div class="tool-pill" title="Jira"><svg width="18" height="18" viewBox="0 0 100 100"><path d="M50 5L5 50l25 25 20-20 20 20 25-25L50 5z" fill="#2684FF"/><path d="M50 5L30 25 50 45 70 25 50 5z" fill="#0052CC"/></svg></div>
-        <div class="tool-pill" title="Maze"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#6B3BFA"/><text x="12" y="68" font-size="44" font-weight="700" fill="#fff" font-family="Arial,sans-serif">Mz</text></svg></div>
-        <div class="tool-pill" title="Zeplin"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#FDBD39"/><text x="12" y="68" font-size="44" font-weight="700" fill="#fff" font-family="Arial,sans-serif">Zp</text></svg></div>
-        <div class="tool-pill" title="Lottie"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#00DDB3"/><text x="14" y="65" font-size="38" font-weight="700" fill="#fff" font-family="Arial,sans-serif">Lo</text></svg></div>
-        <div class="tool-pill" title="Webflow"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="50" fill="#4353FF"/><path d="M18 65s18-38 32-38 14 38 14 38 8-38 22-38" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none"/></svg></div>
-        <div class="tool-pill" title="Miro"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#FFD02F"/><text x="14" y="68" font-size="44" font-weight="700" fill="#050038" font-family="Arial,sans-serif">Mi</text></svg></div>
-        <div class="tool-pill" title="Photoshop"><svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#001D34"/><text x="8" y="72" font-size="50" font-weight="900" fill="#31A8FF" font-family="Arial,sans-serif">Ps</text></svg></div>
+        <div class="tool-pill" title="Figma"><img src="./assets/icons/tool13.svg"/></div>
+        <div class="tool-pill" title="Figma"><img src="./assets/icons/tool12.svg"/></div>
+        <div class="tool-pill" title="Figma"><img src="./assets/icons/tool1.svg"/></div>
+        <div class="tool-pill" title="Framer"><img src="./assets/icons/tool2.svg"/></div>
+        <div class="tool-pill" title="After Effects"><img src="./assets/icons/tool3.svg"/></div>
+        <div class="tool-pill" title="Illustrator"><img src="./assets/icons/tool4.svg"/></div>
+        <div class="tool-pill" title="ProtoPie"><img src="./assets/icons/tool5.svg"/></div>
+        <div class="tool-pill" title="Maze"><img src="./assets/icons/tool6.svg"/></div>
+        <div class="tool-pill" title="Zeplin"><img src="./assets/icons/tool7.svg"/></div>
+        <div class="tool-pill" title="Lottie"><img src="./assets/icons/tool8.svg"/></div>
+        <div class="tool-pill" title="Webflow"><img src="./assets/icons/tool9.svg"/></div>
+        <div class="tool-pill" title="Miro"><img src="./assets/icons/tool10.svg"/></div>
+        <div class="tool-pill" title="Photoshop"><img src="./assets/icons/tool11.svg"/></div>
       </div>
     </div>
   </div>
@@ -232,5 +260,31 @@
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8), { passive: true });
 </script>
+
+<script>
+  const hamburger = document.getElementById('navHamburger');
+  const drawer = document.getElementById('navDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const closeBtn = document.getElementById('navDrawerClose');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.classList.add('active');
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.classList.remove('active');
+  }
+
+  hamburger.addEventListener('click', openDrawer);
+
+  closeBtn.addEventListener('click', closeDrawer);
+
+  overlay.addEventListener('click', closeDrawer);
+</script>
+
 </body>
 </html>
