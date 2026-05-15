@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilabz Heat Pump Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+   href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&display=swap"
+   rel="stylesheet"
+/>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <main class="case-study">
+      <nav class="page-nav shell" aria-label="Case study pages">
+        <a class="active" href="index.html">Heat Pump</a>
+        <a href="instrumentation.html">Instrumentation</a>
+        <a href="uva.html">Pilabz UVA</a>
+      </nav>
+      <header class="hero shell">
+        <p class="eyebrow"><span></span> IoT dashboard · Embedded display · 2025</p>
+        <h1>Pilabz Heat Pump Dashboard</h1>
+        <p class="lede">
+          A real-time embedded dashboard designed for a campus heat pump installation, making technical performance data understandable at a glance for both engineers and non-technical employees.
+        </p>
+
+        <dl class="project-meta">
+          <div>
+            <dt>Role</dt>
+            <dd>UI/UX Designer</dd>
+          </div>
+          <div>
+            <dt>Platform</dt>
+            <dd>Embedded display</dd>
+          </div>
+          <div>
+            <dt>Interaction</dt>
+            <dd>None - always-on</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live · 2025</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="section shell">
+        <p class="section-kicker">01 — Problem</p>
+        <h2>Dense engineering data. <strong>3 seconds to read it.</strong></h2>
+        <p>
+          The dashboard had to show six live metrics — COP, electrical power, heat delivered, cumulative savings, and daily averages — on one fixed screen. There was no interaction, scrolling, or second-level detail.<br>
+
+          The challenge was to make dense engineering data readable from a distance and meaningful within a few seconds.
+        </p>
+      </section>
+
+      <section class="dashboard-shell shell" aria-label="Heat pump dashboard preview">
+      <img class="dashboard-preview-img" src="assets/dashboard-preview.svg" alt="Heat pump dashboard preview" />
+      </section>
+
+      <section class="section shell">
+        <p class="section-kicker">02 — Design decisions</p>
+        <h2>Three choices that <strong>defined the screen</strong></h2>
+
+        <div class="choice-list">
+          <article class="choice-card">
+            <div class="choice-body">
+              <span class="dot"></span>
+              <div>
+                <h3>Hierarchy by impact, not engineering order</h3>
+                <p>
+                  COP and cumulative savings were made visually dominant because they communicated the clearest performance and impact story. Raw engineering values remained visible but secondary.
+                </p>
+              </div>
+            </div>
+            <div class="choice-note muted">
+              <b>Rejected</b>
+              <p>An equal-weight grid where every metric had the same visual importance.</p>
+            </div>
+            <!-- <div class="choice-note accent">
+              <b>Why</b>
+              <p>In 3 seconds, a person can read one number. That number should be the most important one.</p>
+            </div> -->
+          </article>
+
+          <article class="choice-card">
+            <div class="choice-body">
+              <span class="dot"></span>
+              <div>
+                <h3>Designed for distance</h3>
+                <p>
+                  The screen was designed for people standing 1–2 metres away, not sitting at a desk. Large numbers, clear spacing, and grouped cards helped users scan the dashboard quickly.  
+                   </p>
+              </div>
+            </div>
+            <div class="choice-note muted">
+              <b>Rejected</b>
+              <p>A dense dashboard layout with smaller labels and more detailed values.</p>
+            </div>
+            <!-- <div class="choice-note accent">
+              <b>Why</b>
+              <p>Familiarity lowers cognitive load. When the visual language matches what people already know, they trust the data faster.</p>
+            </div> -->
+          </article>
+
+          <article class="choice-card">
+            <div class="choice-body">
+              <span class="dot"></span>
+              <div>
+                <h3>Familiar visual language</h3>
+                <p>
+                  I used a clean card-based interface with soft translucent surfaces to make the technical data feel approachable for a mixed audience.
+                </p>
+              </div>
+            </div>
+            <div class="choice-note muted">
+              <b>Rejected</b>
+              <p>Opaque industrial metric tiles that felt functional but less inviting for non-technical viewers.</p>
+            </div>
+            <!-- <div class="choice-note accent">
+              <b>Why</b>
+              <p>An always-on ambient display has one job - communicate instantly without anyone touching it.</p>
+            </div> -->
+          </article>
+        </div>
+      </section>
+
+      <section class="impact shell">
+        <div>
+          <p class="section-kicker">03 — Impact</p>
+          <h2>Numbers that <strong>tell a real story</strong></h2>
+          <div class="impact-copy">
+            The heat pump replaced a fuel-based heating process with a more efficient system and it was installed as a live always-on display at Zoho, Tenkasi  campus. It helped make heat pump performance and energy savings visible in real time.
+        </div>
+        </div>
+        <figure class="photo-card">
+          <img src="assets/impact-room.svg" alt="People viewing the heat pump dashboard in a room" />
+        </figure>
+      </section>
+
+      <figure class="wide-photo shell">
+        <img src="assets/installed-dashboard.svg" alt="Installed Pilabz heat pump dashboard on a wall" />
+      </figure>
+
+      <section class="section shell reflection">
+        <p class="section-kicker">04 — Reflection</p>
+        <h2>What this project <strong>taught me</strong></h2>
+        <div class="quote-block">
+          <p>
+            This project taught me that UX is not always about interaction. In an ambient display, the main job is clarity. The screen has to communicate without asking the viewer to stop, tap, or explore.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

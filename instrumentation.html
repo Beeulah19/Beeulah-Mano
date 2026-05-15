@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milli-Ohm Meter & Power Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500&family=Syne:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="case-study">
+      <nav class="page-nav shell" aria-label="Case study pages">
+        <a href="index.html">Heat Pump</a>
+        <a class="active" href="instrumentation.html">Instrumentation</a>
+        <a href="uva.html">Pilabz UVA</a>
+      </nav>
+
+      <header class="hero shell">
+        <p class="eyebrow"><span></span> Desktop apps · Instrumentation · 2024</p>
+        <h1>Milli-Ohm Meter &<br />Power Analyzer</h1>
+        <p class="lede">
+          Two separate instrument apps. A hardware prototype that made it to brochure and
+          packaging. And a design observation during usability testing that ended up reshaping
+          how Pilabz thinks about its entire product suite.
+        </p>
+
+        <dl class="project-meta">
+          <div>
+            <dt>Role</dt>
+            <dd>UI/UX Designer</dd>
+          </div>
+          <div>
+            <dt>Deliverables</dt>
+            <dd>App UI · Brochure · Packaging</dd>
+          </div>
+          <div>
+            <dt>Instruments</dt>
+            <dd>Milli-Ohm · Power Analyzer · PSU</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Prototyped and shipped, then evolved into UVA</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="section shell">
+        <p class="section-kicker">01 — Context</p>
+        <h2>Two apps. <strong>Same engineer. Same workflow.</strong></h2>
+        <p>
+          A suite of desktop applications designed for precision measurement and real-time
+          analysis, enabling engineers to connect, monitor, and record critical data. The
+          electrical team needed interfaces for a milli-ohm meter, a power analyzer, and a
+          power supply unit. Engineering assigned them separately, so each got its own desktop
+          app, navigation, and data view.
+        </p>
+        <p>
+          The milli-ohm meter went beyond software. The hardware prototype was fully built, and
+          the work extended to app UI, product brochure, and physical packaging. The power
+          analyzer followed. Both apps were functionally complete, then market conditions
+          shifted and the products were shelved because the timing was not right.
+        </p>
+      </section>
+
+      <section class="image-pair shell">
+        <figure>
+          <img src="assets/instrumentation/milli-ohm-app.png" alt="Milli-ohm meter desktop app" />
+        </figure>
+        <figure>
+          <img src="assets/instrumentation/power-analyzer-app.png" alt="Power analyzer desktop app" />
+        </figure>
+      </section>
+
+      <section class="section shell">
+        <p class="section-kicker">02 — What I got right</p>
+        <h2>Key UX decisions <strong>in each app</strong></h2>
+        <div class="ux-grid">
+          <article class="ux-card">
+            <b>01</b>
+            <h3>Primary reading dominates</h3>
+            <p>
+              In the milli-ohm meter, resistance gets the full spotlight. Temperature, range,
+              and voltage sit below as supporting context so engineers see the number that
+              matters first.
+            </p>
+          </article>
+          <article class="ux-card">
+            <b>02</b>
+            <h3>Selectable parameters, not fixed tables</h3>
+            <p>
+              Material, temperature, and range controls stay visible near the reading instead
+              of forcing engineers through separate configuration screens.
+            </p>
+          </article>
+          <article class="ux-card">
+            <b>03</b>
+            <h3>Three chart views, one toggle</h3>
+            <p>
+              Instantaneous, harmonics, and cumulative views live as one tab switch on the
+              waveform panel, keeping the current session in context.
+            </p>
+          </article>
+          <article class="ux-card">
+            <b>04</b>
+            <h3>Record Values always accessible</h3>
+            <p>
+              Logging stays persistent in the bottom-left of both apps, never buried in a menu,
+              so a reading can be captured quickly in a lab environment.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <p class="section-kicker">03 — The proposal that changed everything</p>
+        <h2>The observation that <strong>changed the product direction</strong></h2>
+        <p>
+          After both apps were complete, I sat with an electrical engineer for a usability
+          walkthrough. In one session he switched between the milli-ohm app, the power analyzer,
+          and a separate PSU window multiple times, cross-checking readings manually and losing
+          the thread of what he had just captured.
+        </p>
+        <p>
+          The apps worked fine individually. Together, they created friction nobody had named
+          yet. I documented a platform architecture tree and presented it to the CEO and advisory
+          panel committee. The proposal was approved, both apps were dropped, and the engineering
+          team began work on what eventually became Pilabz UVA.
+        </p>
+        <div class="evolution-box">
+          <p class="section-kicker">Evolution path</p>
+          <div class="flow-pills">
+            <span>Milli-Ohm app</span><i>+</i><span>Power Analyzer app</span><i>+</i><span>PSU app</span><i>→</i><strong>Pilabz UVA ↗</strong>
+          </div>
+          <p>
+            A usability session, not a strategy meeting, changed the product roadmap. These
+            apps were the research phase that made the right question visible.
+          </p>
+        </div>
+      </section>
+
+      <section class="media-strip shell">
+        <div class="wide-composite two-one">
+          <img src="assets/instrumentation/package-front.png" alt="Instrumentation product packaging" />
+          <img src="assets/instrumentation/brochure-spread.png" alt="Instrumentation brochure spread" />
+        </div>
+        <p class="caption">
+          Beyond the screen - product packaging and brochure designed for the physical prototype,
+          completing the end-to-end product design scope.
+        </p>
+      </section>
+
+      <section class="media-strip shell">
+        <div class="wide-composite">
+          <img src="assets/instrumentation/wireframes.png" alt="Instrumentation wireframes" />
+          <img src="assets/instrumentation/ui-screens.png" alt="Instrumentation light and dark UI screens" />
+        </div>
+        <p class="caption">
+          From sketch to screen - wireframes, light mode UI, and dark mode UI designed across
+          the full application.
+        </p>
+      </section>
+
+      <section class="section shell reflection">
+        <p class="section-kicker">04 — Takeaways</p>
+        <h2>What this project <strong>taught me</strong></h2>
+        <div class="quote-block">
+          <p>
+            Correct is not the same as right. Technically sound work can still be solving the
+            wrong problem. I learned to question the framing, not just execute it well.
+          </p>
+          <p>
+            Proximity is underrated. Sitting next to someone doing their actual job surfaces
+            things no brief captures. I want to keep building that habit into my process early,
+            not as a final check.
+          </p>
+          <p>
+            Shelved is not failed. Products get killed for reasons outside design. What matters
+            is whether the work held up and whether the thinking carried forward. Here, both did.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
