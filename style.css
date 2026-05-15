@@ -611,6 +611,7 @@ nav.scrolled {
   font-size: 14px;
   color: #2c2c2c;
   font-family: 'Host Grotesk', sans-serif;
+  font-family: 'Georgia', serif;
   white-space: nowrap;
   cursor: default;
   transition: background-color 0.2s ease, border-color 0.2s ease;
