@@ -59,6 +59,12 @@ nav.scrolled {
   text-decoration: none;
 }
 
+.nav-logo img {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -76,10 +82,7 @@ nav.scrolled {
   transition: color 0.2s;
 }
 
-.nav-links a:hover {
-  color: var(--teal);
-}
-
+.nav-links a:hover,
 .nav-links a.active {
   color: var(--teal);
 }
@@ -111,7 +114,7 @@ nav.scrolled {
 }
 
 .hero-left {
-  padding: 100px 0 0px 60px;
+  padding: 100px 0 0 60px;
 }
 
 .hero-intro {
@@ -139,10 +142,9 @@ nav.scrolled {
 
 .hero-right img {
   width: 100%;
-  max-width:394px;
+  max-width: 394px;
   height: auto;
   display: block;
-  /* filter: grayscale(100%) contrast(1.05); */
   margin-right: 3%;
   object-fit: contain;
   object-position: bottom;
@@ -166,7 +168,6 @@ nav.scrolled {
   pointer-events: none;
 }
 
-/* Green blob 1 */
 .hero::before {
   width: 460px;
   height: 460px;
@@ -176,8 +177,6 @@ nav.scrolled {
   animation: roamBlobOne 10s ease-in-out infinite alternate;
 }
 
-
-/* Green blob 2 */
 .hero::after {
   width: 460px;
   height: 460px;
@@ -214,6 +213,7 @@ nav.scrolled {
     transform: translate(-140px, -360px) scale(1.1);
   }
 }
+
 /* ============================================
    PERSPECTIVE SECTION
    ============================================ */
@@ -255,14 +255,18 @@ nav.scrolled {
   opacity: 1;
 }
 
+/* ============================================
+   STATS SECTION
+   ============================================ */
+.counts {
+  background-color: #FDF7ED;
+}
+
 .stats-row {
   display: flex;
   justify-content: center;
   gap: 120px;
   padding: 40px;
-}
-.counts{
-    background-color: #FDF7ED;
 }
 
 .stat-num {
@@ -328,9 +332,14 @@ nav.scrolled {
 
 .work-img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.work-card:hover .work-img {
+  transform: scale(1.08);
 }
 
 .work-info {
@@ -442,7 +451,7 @@ nav.scrolled {
 }
 
 .career-right {
-  /* border-left: 1px solid var(--border); */
+  border-left: none;
 }
 
 .career-desc-block {
@@ -464,10 +473,6 @@ nav.scrolled {
   margin-bottom: 0;
 }
 
-.nav-hamburger {
-  display: none;
-}
-
 /* ============================================
    ABOUT ME SECTION
    ============================================ */
@@ -479,7 +484,6 @@ nav.scrolled {
 .aboutme-top {
   display: grid;
   grid-template-columns: 1fr 320px;
-  /* gap: 80px; */
   padding-bottom: 64px;
 }
 
@@ -488,7 +492,6 @@ nav.scrolled {
   color: var(--text-mid);
   line-height: 1.8;
   margin-bottom: 20px;
-  /* max-width: 680px; */
 }
 
 .aboutme-bio-p:last-child {
@@ -497,7 +500,6 @@ nav.scrolled {
 
 .aboutme-photo-box {
   position: relative;
-  /* border-radius: 12px; */
   overflow: hidden;
   background: var(--teal);
   flex-shrink: 0;
@@ -512,8 +514,6 @@ nav.scrolled {
   object-fit: cover;
   object-position: top center;
   display: block;
-  /* mix-blend-mode: multiply; */
-  /* opacity: 0.78; */
 }
 
 .aboutme-photo-label {
@@ -532,12 +532,10 @@ nav.scrolled {
 /* ============================================
    OFF-SCREEN CREATIVITY / HOBBIES
    ============================================ */
-
 .offscreen-block {
   margin-top: 36px;
 }
 
-/* Toggle Button */
 .offscreen-toggle {
   width: fit-content;
   display: inline-flex;
@@ -572,7 +570,6 @@ nav.scrolled {
   transform: translateY(-2px);
 }
 
-/* Expandable Panel */
 .offscreen-panel {
   max-height: 0;
   overflow: hidden;
@@ -589,7 +586,6 @@ nav.scrolled {
   margin-top: 34px;
 }
 
-/* Two Column Layout */
 .offscreen-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -597,7 +593,6 @@ nav.scrolled {
   align-items: start;
 }
 
-/* Left Text Content */
 .offscreen-copy {
   max-width: 420px;
 }
@@ -626,7 +621,6 @@ nav.scrolled {
   color: var(--text-mid);
 }
 
-/* Right Image Collage */
 .offscreen-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -634,7 +628,6 @@ nav.scrolled {
   gap: 14px;
 }
 
-/* Image Card */
 .offscreen-img-card {
   position: relative;
   overflow: hidden;
@@ -643,7 +636,6 @@ nav.scrolled {
   background: var(--teal);
 }
 
-/* Image zooms only inside the card */
 .offscreen-img-card img {
   width: 100%;
   height: 100%;
@@ -660,7 +652,6 @@ nav.scrolled {
   filter: brightness(0.72) saturate(1.08);
 }
 
-/* Text overlay on image */
 .offscreen-img-card figcaption {
   position: absolute;
   left: 14px;
@@ -694,13 +685,17 @@ nav.scrolled {
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.82);
 }
-.about-me{
-    padding: 40px 30px;
+
+/* ============================================
+   VALUES / SKILLS SECTION
+   ============================================ */
+.about-me {
+  padding: 40px 30px;
 }
 
-.aboutme-top>.reveal{
-    background-color: #FEFBF6;
-    padding: 10px;
+.aboutme-top > .reveal {
+  background-color: #FEFBF6;
+  padding: 10px;
 }
 
 .aboutme-bottom {
@@ -768,10 +763,10 @@ nav.scrolled {
   margin-bottom: 18px;
 }
 
-.skills-table{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.skills-table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skill-cell {
@@ -781,7 +776,6 @@ nav.scrolled {
   padding: 5px 10px;
   font-size: 14px;
   color: #2c2c2c;
-  font-family: 'Host Grotesk', sans-serif;
   font-family: 'Georgia', serif;
   white-space: nowrap;
   cursor: default;
@@ -803,19 +797,16 @@ nav.scrolled {
 }
 
 .tool-pill {
-  /* width: 38px;
-  height: 38px; */
   border-radius: 4px;
   background: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid var(--border); */
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: default;
 }
 
-.tool-pill > img{
+.tool-pill > img {
   width: 30px;
 }
 
@@ -850,6 +841,13 @@ nav.scrolled {
   line-height: 1;
   margin-bottom: 32px;
   letter-spacing: -2px;
+}
+
+.cta-sig img {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .cta-tagline {
@@ -950,8 +948,107 @@ nav.scrolled {
 }
 
 /* ============================================
+   HAMBURGER / MOBILE DRAWER
+   ============================================ */
+.nav-hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-hamburger span {
+  width: 24px;
+  height: 2px;
+  background: #111;
+  transition: 0.3s ease;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.nav-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  padding: 80px 30px;
+  transition: 0.35s ease;
+  z-index: 1000;
+}
+
+.nav-drawer.open {
+  right: 0;
+}
+
+.nav-drawer-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-drawer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-drawer-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+@media (max-width: 1024px) {
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aboutme-bottom {
+    gap: 48px;
+  }
+}
 
 @media (max-width: 768px) {
   nav {
@@ -978,6 +1075,10 @@ nav.scrolled {
     padding: 80px 20px 60px;
   }
 
+  .hero-headline {
+    max-width: 100%;
+  }
+
   .hero::before {
     width: 300px;
     height: 300px;
@@ -1001,6 +1102,10 @@ nav.scrolled {
     padding-right: 20px;
   }
 
+  .stats-row {
+    gap: 48px;
+  }
+
   .works-grid {
     grid-template-columns: 1fr;
   }
@@ -1021,10 +1126,6 @@ nav.scrolled {
   .aboutme-top,
   .aboutme-bottom {
     grid-template-columns: 1fr;
-  }
-
-  .stats-row {
-    gap: 48px;
   }
 
   .value-row {
@@ -1061,6 +1162,11 @@ nav.scrolled {
 }
 
 @media (max-width: 480px) {
+  .stats-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
   .offscreen-gallery {
     grid-template-columns: 1fr;
     grid-auto-rows: 220px;
