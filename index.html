@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beeulah — Product Designer</title>
 <link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
 <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet"></head>
 <body>
+  <div class="custom-cursor" id="customCursor"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -54,8 +55,29 @@
 <section class="hero">
   <div class="hero-left reveal">
     <p class="hero-intro">Hi, I'm Beeulah.</p>
-    <h1 class="hero-headline">Product designer turning complex technical workflows into clear, usable product experiences.</h1>
+
+    <h1 class="hero-headline">
+      Product designer turning complex technical workflows into clear, usable product experiences.
+    </h1>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years of hands-on<br />experience</div>
+      </div>
+
+      <div class="hero-stat">
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Product<br />initiatives</div>
+      </div>
+
+      <div class="hero-stat">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Technical<br />Domains</div>
+      </div>
+    </div>
   </div>
+
   <div class="hero-right">
     <img src="./assets/main.svg" alt="Beeulah — Product Designer" />
   </div>
@@ -67,15 +89,6 @@
   <p class="perspective-quote scroll-words">Design surrounds every moment of human life — most people just don't see it yet. My job is to make sure they feel it, even if they never notice it.</p>
   
 </section>
-
-<section class="counts"> 
-  <div class="stats-row reveal">
-    <div><div class="stat-num">3+</div><div class="stat-label">Years of experience</div></div>
-    <div><div class="stat-num">8+</div><div class="stat-label">Products</div></div>
-    <div><div class="stat-num">4</div><div class="stat-label">Technical Domains</div></div>
-  </div>
-</section>
-
 <!-- SELECTED WORKS -->
 <section class="works-section" id="works">
   <div class="section-eyebrow reveal">PROJECTS</div>
@@ -137,7 +150,7 @@
         </div>
       </div>
       <div class="career-entry reveal" style="transition-delay:.1s">
-        <div class="career-meta">2024 – PRESENT &nbsp;|&nbsp; INTERNSHIP</div>
+        <div class="career-meta">2023 – 2024 &nbsp;|&nbsp; INTERNSHIP</div>
         <div class="career-role">UI/UX Design Intern</div>
         <div class="career-company">Tentacle Technologies</div>
         <div class="career-location">
@@ -174,75 +187,7 @@
       <img src="./assets/aboutme.svg" alt="About Beeulah" />
     </div>
   </div>
-  <div class="offscreen-block reveal">
-  <button class="offscreen-toggle" id="offscreenToggle">
-    <span>Not all my ideas live on screens.</span>
-    <small>See what else I create</small>
-  </button>
-
-<div class="offscreen-panel" id="offscreenPanel">
-  <div class="offscreen-layout">
-    <div class="offscreen-copy">
-      <p class="offscreen-eyebrow">Off-screen creativity</p>
-      <h3>Dancing keeps me expressive. Baking keeps me patient.</h3>
-      <p>
-        When I’m not designing interfaces, I’m usually creating in other ways —
-        through movement, flavour, texture, and tiny details that make people feel something.
-      </p>
-    </div>
-
-    <div class="offscreen-gallery">
-  <figure class="offscreen-img-card">
-    <img src="https://picsum.photos/id/64/800/800" alt="Dance movement" />
-    <figcaption>
-      <strong>Movement</strong>
-      <span>Dancing helps me express what words cannot.</span>
-    </figcaption>
-  </figure>
-
-  <figure class="offscreen-img-card">
-    <img src="https://picsum.photos/id/1080/800/800" alt="Baking detail" />
-    <figcaption>
-      <strong>Flavour</strong>
-      <span>Baking teaches patience, precision, and joy.</span>
-    </figcaption>
-  </figure>
-
-  <figure class="offscreen-img-card">
-    <img src="https://picsum.photos/id/292/800/800" alt="Creative detail" />
-    <figcaption>
-      <strong>Details</strong>
-      <span>Tiny things often create the biggest feeling.</span>
-    </figcaption>
-  </figure>
-
-  <figure class="offscreen-img-card">
-    <img src="https://picsum.photos/id/325/800/800" alt="Dance mood" />
-    <figcaption>
-      <strong>Rhythm</strong>
-      <span>Movement keeps my creative energy alive.</span>
-    </figcaption>
-  </figure>
-
-  <figure class="offscreen-img-card">
-    <img src="https://picsum.photos/id/431/800/800" alt="Baking table" />
-    <figcaption>
-      <strong>Texture</strong>
-      <span>I love creating things people can feel.</span>
-    </figcaption>
-  </figure>
-
-  <figure class="offscreen-img-card">
-    <img src="https://picsum.photos/id/493/800/800" alt="Creative moment" />
-    <figcaption>
-      <strong>Reset</strong>
-      <span>These moments bring me back to myself.</span>
-    </figcaption>
-  </figure>
-</div>
-  </div>
-</div>
-</div>
+  
 </section>
 
 <section class="about-me">
@@ -277,23 +222,93 @@
         <p class="skill-cell">Data Interpretation</p><p class="skill-cell">Ethical &amp; Inclusive Design</p>
       </div>
       <div class="tools-grid">
-        <div class="tool-pill" title="Figma"><img src="./assets/icons/tool13.svg"/></div>
-        <div class="tool-pill" title="Framer"><img src="./assets/icons/tool12.svg"/></div>
-        <div class="tool-pill" title="Dovetail"><img src="./assets/icons/tool1.svg"/></div>
-        <div class="tool-pill" title="Mobbin"><img src="./assets/icons/tool2.svg"/></div>
-        <div class="tool-pill" title="Relume"><img src="./assets/icons/tool3.svg"/></div>
-        <div class="tool-pill" title="UX Pilot"><img src="./assets/icons/tool4.svg"/></div>
-        <div class="tool-pill" title="Maze"><img src="./assets/icons/tool5.svg"/></div>
-        <div class="tool-pill" title="Hotjar"><img src="./assets/icons/tool6.svg"/></div>
-        <div class="tool-pill" title="Replit"><img src="./assets/icons/tool7.svg"/></div>
-        <div class="tool-pill" title="ProtoPie"><img src="./assets/icons/tool8.svg"/></div>
-        <div class="tool-pill" title="Google Labs"><img src="./assets/icons/tool9.svg"/></div>
-        <div class="tool-pill" title="Notion"><img src="./assets/icons/tool10.svg"/></div>
-        <div class="tool-pill" title="Midjourney"><img src="./assets/icons/tool11.svg"/></div>
+        <div class="tool-pill" data-tooltip="Figma"><img src="./assets/icons/tool13.svg"/></div>
+        <div class="tool-pill" data-tooltip="Framer"><img src="./assets/icons/tool12.svg"/></div>
+        <div class="tool-pill" data-tooltip="Dovetail"><img src="./assets/icons/tool1.svg"/></div>
+        <div class="tool-pill" data-tooltip="Mobbin"><img src="./assets/icons/tool2.svg"/></div>
+        <div class="tool-pill" data-tooltip="Relume"><img src="./assets/icons/tool3.svg"/></div>
+        <div class="tool-pill" data-tooltip="UX Pilot"><img src="./assets/icons/tool4.svg"/></div>
+        <div class="tool-pill" data-tooltip="Maze"><img src="./assets/icons/tool5.svg"/></div>
+        <div class="tool-pill" data-tooltip="Hotjar"><img src="./assets/icons/tool6.svg"/></div>
+        <div class="tool-pill" data-tooltip="Replit"><img src="./assets/icons/tool7.svg"/></div>
+        <div class="tool-pill" data-tooltip="ProtoPie"><img src="./assets/icons/tool8.svg"/></div>
+        <div class="tool-pill" data-tooltip="Google Labs"><img src="./assets/icons/tool9.svg"/></div>
+        <div class="tool-pill" data-tooltip="Notion"><img src="./assets/icons/tool10.svg"/></div>
+        <div class="tool-pill" data-tooltip="Midjourney"><img src="./assets/icons/tool11.svg"/></div>
       </div>
     </div>
   </div>
 </section>
+</section>
+
+<!-- OFF-SCREEN CREATIVITY -->
+<section class="offscreen-section">
+
+  <p class="offscreen-question reveal">
+  Curious what I create when I’m not designing in Figma?
+</p>
+
+  <div class="offscreen-block reveal">
+    <button class="offscreen-toggle" id="offscreenToggle" type="button">
+  <span id="offscreenToggleText">Life outside the grid →</span>
+</button>
+  </div>
+
+  <div class="offscreen-panel" id="offscreenPanel">
+    <div class="offscreen-layout">
+      <div class="offscreen-copy">
+        <p class="offscreen-eyebrow">Off-screen creativity</p>
+
+<h3>What I do when I'm not designing</h3>
+
+<p class="offscreen-body">
+  Dance has been with me since third standard — I perform, I choreograph, and it's still the place I'm happiest. That same need to create something with my hands carried into other parts of my life too. Custom cakes have been my weekend obsession for five years. Every order is different — someone comes with a feeling, and I turn it into something they didn't know they could ask for. It's the work I'm most proud of showing people who've never heard of UX, and somehow it's still the thing people remember most when they meet me.
+</p>
+
+<p class="offscreen-body">
+  That need to make something entirely my own didn't stop there. Fashion design was a dream I couldn't chase formally — so I just never let it go entirely.
+</p>
+      </div>
+
+      <div class="offscreen-gallery offscreen-gallery-four">
+        <figure class="offscreen-img-card">
+          <img src="assets/about me/Dance.PNG" alt="Costume design sketch" />
+          <figcaption>
+            <!-- <strong>Costume design</strong> -->
+            <span>A college performance close to my heart</span>
+          </figcaption>
+        </figure>
+
+        <figure class="offscreen-img-card">
+          <img src="assets/about me/customcake.jpeg" alt="Custom cake design" />
+          <figcaption>
+            <!-- <strong>Custom cakes</strong> -->
+            <span>A recent cake I created and really loved</span>
+          </figcaption>
+        </figure>
+
+        <figure class="offscreen-img-card">
+          <img src="assets/about me/VJScake.PNG" alt="Decorated cake" />
+          <figcaption>
+            <!-- <strong>Baking details</strong> -->
+            <span>Made this for Actor VJS's birthday</span>
+          </figcaption>
+        </figure>
+
+        <figure class="offscreen-img-card">
+          <img src="assets/about me/costumedesign.png" alt="Creative movement and costume design" />
+          <figcaption>
+            <!-- <strong>Movement</strong> -->
+            <span>Designed my own Christmas outfit</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
 <!-- CTA FOOTER -->
 <section class="cta-section" id="contact">
   <div class="cta-open reveal">OPEN FOR OPPORTUNITIES</div>
@@ -386,14 +401,61 @@
 
   overlay.addEventListener('click', closeDrawer);
 </script>
-
 <script>
-  const offscreenToggle = document.getElementById("offscreenToggle");
-  const offscreenPanel = document.getElementById("offscreenPanel");
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollText = document.querySelector(".scroll-words");
 
+  if (!scrollText) return;
+
+  const words = scrollText.textContent.trim().split(/\s+/);
+  scrollText.innerHTML = "";
+
+  for (let i = 0; i < words.length; i += 2) {
+    const span = document.createElement("span");
+    span.className = "scroll-word-group";
+    span.textContent = words.slice(i, i + 2).join(" ") + " ";
+    scrollText.appendChild(span);
+  }
+
+  const wordGroups = scrollText.querySelectorAll(".scroll-word-group");
+
+  function revealWordsOnScroll() {
+    const rect = scrollText.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const start = windowHeight * 0.85;
+    const end = rect.height * 0.6;
+
+    let progress = (start - rect.top) / (start - end);
+    progress = Math.max(0, Math.min(progress, 1));
+
+    const activeCount = Math.floor(progress * wordGroups.length);
+
+    wordGroups.forEach((group, index) => {
+      group.classList.toggle("active", index < activeCount);
+    });
+  }
+
+  window.addEventListener("scroll", revealWordsOnScroll);
+  window.addEventListener("resize", revealWordsOnScroll);
+
+  revealWordsOnScroll();
+});
+</script>
+<script>
+const offscreenToggle = document.getElementById("offscreenToggle");
+const offscreenPanel = document.getElementById("offscreenPanel");
+const offscreenToggleText = document.getElementById("offscreenToggleText");
+
+if (offscreenToggle && offscreenPanel && offscreenToggleText) {
   offscreenToggle.addEventListener("click", () => {
-    offscreenPanel.classList.toggle("open");
+    const isOpen = offscreenPanel.classList.toggle("open");
+
+    offscreenToggleText.textContent = isOpen
+      ? "Close my off-screen world ↑"
+      : "Life outside the grid →";
   });
+}
 </script>
 
 <script>
@@ -426,6 +488,38 @@
   mainPageSections.forEach((section) => {
     mainNavObserver.observe(section);
   });
+</script>
+<script>
+  const customCursor = document.getElementById("customCursor");
+
+  if (customCursor) {
+    window.addEventListener("mousemove", (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+
+    const hoverTargets = document.querySelectorAll(
+      "a, button, .work-card, .case-toc-link, .tool-pill, .offscreen-img-card"
+    );
+
+    hoverTargets.forEach((target) => {
+      target.addEventListener("mouseenter", () => {
+        customCursor.classList.add("is-hovering");
+      });
+
+      target.addEventListener("mouseleave", () => {
+        customCursor.classList.remove("is-hovering");
+      });
+    });
+
+    document.addEventListener("mouseleave", () => {
+      customCursor.classList.add("is-hidden");
+    });
+
+    document.addEventListener("mouseenter", () => {
+      customCursor.classList.remove("is-hidden");
+    });
+  }
 </script>
 </body>
 </html>

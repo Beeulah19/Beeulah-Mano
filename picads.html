@@ -1,9 +1,10 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pilabz UVA</title>
+    <title>Motor Mojo & PiCADS — Motor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,302 +13,430 @@
     />
     <link rel="stylesheet" href="styles2.css" />
   </head>
+
   <body>
     <!-- MAIN NAV -->
-<nav id="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="./assets/beeulah-logo.svg" alt="logo" />
-  </a>
+    <nav id="nav">
+      <a href="index.html" class="nav-logo">
+        <img src="./assets/beeulah-logo.svg" alt="logo" />
+      </a>
 
-  <ul class="nav-links">
-    <li><a href="index.html#works" class="nav-link active">Selected Work</a></li>
-    <li><a href="index.html#career" class="nav-link">Experience</a></li>
-    <li><a href="index.html#about" class="nav-link">About</a></li>
-    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-    <li><a href="#" class="nav-resume">Resume</a></li>
-  </ul>
+      <ul class="nav-links">
+        <li><a href="index.html#works" class="nav-link active">Selected Work</a></li>
+        <li><a href="index.html#career" class="nav-link">Experience</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="#" class="nav-resume">Resume</a></li>
+      </ul>
 
-  <button class="nav-hamburger" id="navHamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
+      <button class="nav-hamburger" id="navHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
-<div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-overlay" id="navOverlay"></div>
 
-<div class="nav-drawer" id="navDrawer">
-  <button class="nav-drawer-close" id="navDrawerClose">✕</button>
+    <div class="nav-drawer" id="navDrawer">
+      <button class="nav-drawer-close" id="navDrawerClose">✕</button>
 
-  <ul class="nav-drawer-links">
-    <li><a href="index.html#works">Selected Work</a></li>
-    <li><a href="index.html#career">Experience</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</div>
-
-    <aside class="case-toc" aria-label="On this page">
-  <p class="case-toc-title">On this page</p>
-
-  <nav class="case-toc-nav">
-    <a class="case-toc-link is-active" href="#overview">Overview</a>
-    <a class="case-toc-link" href="#research">Research</a>
-
-    <div class="case-toc-sub">
-      <a class="case-toc-link case-toc-child" href="#process">process</a>
-      <a class="case-toc-link case-toc-child" href="#prototype">prototype</a>
+      <ul class="nav-drawer-links">
+        <li><a href="index.html#works">Selected Work</a></li>
+        <li><a href="index.html#career">Experience</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </div>
 
-    <a class="case-toc-link" href="#redesign">Redesign work</a>
-    <a class="case-toc-link" href="#physical">Physical world</a>
-    <a class="case-toc-link" href="#reflection">Takeaways</a>
-  </nav>
-</aside>
+    <aside class="case-toc" aria-label="On this page">
+  <div class="case-toc-header">
+    <h3 class="case-toc-project">Pi-CADS</h3>
+    <p class="case-toc-title">On this page</p>
+  </div>
+
+  <nav class="case-toc-nav">
+        <a class="case-toc-link is-active" href="#overview">Overview</a>
+        <a class="case-toc-link" href="#problem">Problem</a>
+        <a class="case-toc-link" href="#solution">Solution</a>
+        <a class="case-toc-link" href="#screens">Screens</a>
+        <a class="case-toc-link" href="#decisions">Key UX decisions</a>
+        <a class="case-toc-link" href="#outcome">Outcome & Reflection</a>
+        
+      </nav>
+    </aside>
+
     <main class="case-study">
-      
+      <!-- HERO -->
       <header class="hero shell" id="overview">
-        <p class="eyebrow"><span></span> App · Brochure · Packaging · End-to-end · 2025</p>
-        <h1>Pilabz UVA</h1>
+        <p class="eyebrow"><span></span> SaaS product design · Motor simulation platform · Web app</p>
+
+        <h1>Motor Mojo & PiCADS — Motor</h1>
+
         <p class="lede">
-          A wireless electrical measurement instrument - one device, four instruments. I owned
-          the design from first research interview to printed retail label.
+          Pi-CADS Motor is a browser-based motor simulation platform for engineers, EV teams, and students.
+          It evolved from MotorMojo, an early proof-of-concept tool, into a more complete platform with guided
+          inputs, simulation states, admin views, and light/dark UI systems.
+        </p>
+
+        <p class="lede">
+          I designed both MotorMojo and Pi-CADS Motor, including the core product flows, simulation screens,
+          admin module, and landing pages for both products.
         </p>
 
         <dl class="project-meta">
           <div>
-            <dt>Role</dt>
-            <dd>UI/UX Designer</dd>
-          </div>
-          <div>
-            <dt>Deliverables</dt>
-            <dd>App UI · Brochure · Packaging</dd>
-          </div>
+  <dt>Role</dt>
+  <dd>
+    UI/UX Designer
+    <span class="role-subtext">Sole designer · Research to handoff</span>
+  </dd>
+</div>
           <div>
             <dt>Platform</dt>
-            <dd>Android · Landscape · Dark only</dd>
+            <dd>Web app · Desktop browser</dd>
+          </div>
+          <div>
+            <dt>Modules</dt>
+            <dd>Product UI, IA, input flows, admin module, landing pages</dd>
           </div>
           <div>
             <dt>Status</dt>
-            <dd>Final testing · Beta release upcoming</dd>
+            <dd>MotorMojo live · Pi-CADS live / in development</dd>
           </div>
         </dl>
       </header>
 
+      <!-- OVERVIEW -->
       <section class="section shell" id="overview-content">
         <p class="section-kicker">01 — Overview</p>
-        <h2>One product. <strong>Every touchpoint.</strong></h2>
+
+        <h2>From proof of concept to simulation platform</h2>
+
         <p>
-          UVA combines a DMM, LCR meter, 3-phase PQA, and 1-phase PQA in a single wireless
-          device, removing the screen from the hardware and putting it on the engineer's phone.
-          I was responsible for the Android app, product brochure, and retail packaging labels
-          for the beta shipment.
+          MotorMojo started as a simple browser-based tool for motor simulation. It helped validate the idea that
+          engineers and students could run motor design workflows without expensive desktop CAE software.
+        </p>
+
+        <p>
+          Pi-CADS Motor expanded that idea into a more professional platform — supporting multiple motor
+          topologies, complex input flows, simulation states, admin controls, output views, and a stronger design
+          system.
         </p>
       </section>
 
-      <section class="section shell" id="research">
-        <p class="section-kicker">01 — Research and process</p>
-        <h2><strong>Understanding</strong> engineers <strong>before designing</strong> for them</h2>
+      <!-- PROBLEM -->
+      <section class="section shell" id="problem">
+        <p class="section-kicker">02 — Problem</p>
+
+        <h2>Making engineering-heavy simulation usable in the browser</h2>
+
         <p>
-          Before any wireframe, I sat with real electrical engineers at Pilabz. Through
-          one-on-one interviews, I surfaced pain points with existing measurement tools:
-          switching between multiple apps, getting no feedback on wrong probe connections, and
-          losing readings because the screen was too small.
+          Motor simulation requires many technical inputs across vehicle specs, motor geometry, materials,
+          winding data, and simulation parameters.
         </p>
+
         <p>
-          From there I built a journey map and user flow, defined the information architecture,
-          and produced lo-fi wireframes that were tested with the team before a single pixel of
-          UI was touched.
+          The UX challenge was to make the workflow feel guided without removing the technical depth engineers needed.
         </p>
-        <div class="process-grid">
-          <article><b>01</b><strong>User Interviews</strong><span>Real engineers · pain points · field context</span></article>
-          <article><b>02</b><strong>Journey Map</strong><span>End-to-end measurement session mapped</span></article>
-          <article><b>03</b><strong>User Flow</strong><span>Four instruments, one app structure</span></article>
-          <article><b>04</b><strong>Lo-fi Wireframes</strong><span>Tested before visual design</span></article>
-          <article><b>05</b><strong>Beta Testing</strong><span>App, brochure, and packaging validated</span></article>
+      </section>
+
+      <!-- SOLUTION -->
+      <section class="section shell" id="solution">
+        <p class="section-kicker">03 — Solution</p>
+
+        <h2>A structured workflow for complex simulation</h2>
+
+        <p>
+          I designed the experience around a guided simulation flow:
+        </p>
+        <div class="solution-flow" aria-label="Simulation workflow">
+          <div class="flow-step">Create motor</div>
+          <div class="flow-step">Select topology</div>
+          <div class="flow-step">Enter inputs</div>
+          <div class="flow-step">Run simulation</div>
+          <div class="flow-step">Review outputs</div>
+          <div class="flow-step">Generate report</div>
         </div>
+
+        <p>
+          The product used step-by-step inputs, default values, adaptive forms, and status-based actions to help users move through the process with more confidence.
+        </p>
+      </section>
+
+      <!-- SCREENS -->
+      <section class="section shell" id="screens">
+        <p class="section-kicker">05 — Screens</p>
+
+        <h2>Look at what shipped</h2>
+
         <div class="evolution-box">
           <p>
-            One shared structure, four instruments. App, brochure, and packaging were designed
-            from the same research and product logic.
+            Some simulation parameters, admin data, and internal details are blurred or recreated with dummy data
+            due to confidentiality.
           </p>
         </div>
-      </section>
 
-      <section class="image-pair shell" id="prototype">
-        <figure>
-          <img src="assets/uva/thermal-test.png" alt="UVA prototype connected to a measurement setup" />
-        </figure>
-        <figure>
-          <img src="assets/uva/android-reading.png" alt="UVA Android app reading on a phone" />
-        </figure>
-      </section>
+        <figure class="wide-photo shipped-screens">
+  <img src="assets/picads/picadsscreens.svg" alt="Pi-CADS Motor product screens and shipped interface views" />
+</figure>
 
-      <section class="section shell" id="redesign">
-        <p class="section-kicker">02 — Where the redesign work happened</p>
-        <h2>Where the real <strong>design work happened</strong></h2>
-        <div class="choice-list">
-          <article class="choice-card compact-choice">
-            <div class="choice-body">
-              <span class="dot"></span>
-              <div>
-                <h3>Wrong probe setup gives nothing - no error, just silence</h3>
-                <p>
-                  Custom schematic illustrations for every instrument-parameter combination
-                  stay fixed on the left of the reading screen. Always visible. Never in the way.
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="choice-card compact-choice">
-            <div class="choice-body">
-              <span class="dot"></span>
-              <div>
-                <h3>Landscape keyboard covers most of the screen</h3>
-                <p>
-                  Almost all free-text input was removed from active sessions. Everything is a
-                  tap, so the keyboard never competes with live data.
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="choice-card compact-choice">
-            <div class="choice-body">
-              <span class="dot"></span>
-              <div>
-                <h3>One layout for four completely different instruments</h3>
-                <p>
-                  Primary reading, secondary values, derived values, and graph zones stay in a
-                  fixed structure. Only the content changes.
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="choice-card compact-choice">
-            <div class="choice-body">
-              <span class="dot"></span>
-              <div>
-                <h3>Three save modes, not all valid for every instrument</h3>
-                <p>
-                  Each save screen shows only applicable modes. Every log entry is tagged with
-                  instrument type and save mode so engineers can scan without opening it.
-                </p>
-              </div>
-            </div>
-          </article>
+      <!-- KEY UX DECISIONS -->
+      <section class="section shell" id="decisions">
+  <p class="section-kicker">04 — Key UX decisions</p>
+  <h2>Structuring complexity without hiding it</h2>
+
+  <div class="choice-list">
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Guided setup without hiding engineering control</h3>
+
+          <p>
+            Instead of exposing every simulation parameter at once, I structured the input flow around the way users build a simulation: define the model, configure the physics, set boundaries, run, then inspect output.
+          </p>
+
+          <p>
+            The stepper was not just used to reduce clutter. It helped convert a complex engineering workflow into a sequence users could reason through without losing control.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <section class="section shell" id="physical">
-        <p class="section-kicker">04 — Beyond the screen</p>
-        <h2>Where the <strong>product meets the physical world</strong></h2>
-        <div class="physical-grid">
-          <div>
-            <img src="assets/uva/box-front.png" alt="Pilabz UVA package front" />
-            <img src="assets/uva/box-angle.png" alt="Pilabz UVA package angled view" />
-            <p class="caption">
-              Designed to sell the concept before the box is even opened. From screen to shelf,
-              the same visual language carries into packaging.
-            </p>
-          </div>
-          <div>
-            <img src="assets/uva/brochure.png" alt="Pilabz UVA brochure spreads" />
-            <p class="caption">
-              Two spreads to convince a technical buyer with instrument functions, real specs,
-              and a clear reason to choose UVA.
-            </p>
-          </div>
+      <div class="choice-note muted">
+        <b>UX value</b>
+        <p>
+          Made simulation setup approachable for students and early users, while still keeping advanced parameters available for expert users.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Defaults as a learning scaffold, not shortcuts</h3>
+
+          <p>
+            Default values were added to help users reach a valid simulation faster, especially when they did not know every parameter at the beginning.
+          </p>
+
+          <p>
+            The intention was not to automate decisions blindly. Defaults acted as a safe starting point that users could inspect, learn from, and override when needed.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <section class="media-strip shell" id="process">
-        <div class="wide-composite rebrand">
-          <div>
-            <img src="assets/uva/sketches.png" alt="UVA early sketches" />
-            <p class="caption">First scribbles on paper - instruments, layouts, and reading hierarchies.</p>
-          </div>
-          <div class="stacked-ui">
-            <img src="assets/uva/ui-top.png" alt="UVA app interface top screen" />
-            <img src="assets/uva/ui-bottom.png" alt="UVA app interface bottom screen" />
-            <p class="caption">Full rebrand from Karuvi to Pilabz - every screen updated from tokens.</p>
-          </div>
+      <div class="choice-note muted">
+        <b>UX value</b>
+        <p>
+          Reduced the fear of starting while still respecting expert control. Beginners could run a simulation, and advanced users could fine-tune it.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Sample vehicles as working mental models</h3>
+
+          <p>
+            Instead of starting new users with an empty workspace, I introduced sample vehicles they could open, inspect, modify, and rerun.
+          </p>
+
+          <p>
+            The samples were not decorative onboarding content. They acted as working examples that taught users how inputs, solver settings, and outputs connect.
+          </p>
         </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>UX value</b>
+        <p>
+          Helped users understand the product through exploration rather than instructions.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Treated logs as part of the product experience</h3>
+
+          <p>
+            For engineering simulation tools, logs are not backend leftovers. They are often the only way users understand what happened during execution.
+          </p>
+
+          <p>
+            I treated logs, solver progress, warnings, and failure traces as first-class UX elements rather than hidden technical output.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>UX value</b>
+        <p>
+          Made long-running simulations feel observable and gave users confidence that the system was actively processing.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Designed outputs for decision-making, not only viewing</h3>
+
+          <p>
+            Simulation output is useful only when users can interpret it and decide what to do next.
+          </p>
+
+          <p>
+            The result area was planned around actions such as export, generate report, rerun with changes, or debug. The goal was to move users from result viewing to result-based iteration.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>UX value</b>
+        <p>
+          Turned simulation results into the next step of the workflow instead of a static endpoint.
+        </p>
+      </div>
+
+      
+    </article>
+  </div>
+</section>
+
+      <!-- OUTCOME -->
+      <section class="section shell" id="outcome">
+        <p class="section-kicker">06 — Outcome</p>
+
+        <h2>A browser-based simulation experience</h2>
+
+        <p>
+          MotorMojo helped validate the product direction as an early simulation tool. Pi-CADS Motor built on that
+          foundation with a more scalable interface, guided workflows, simulation states, admin views, and a
+          stronger design system.
+        </p>
+        <div class="evolution-box metrics-note">
+  <p>
+    Metrics are based on beta customer feedback, internal prototype walkthroughs, and usability observations. They are usability indicators, not post-launch analytics.
+  </p>
+</div>
+        <div class="metrics-grid">
+  <article class="metric-card">
+    <p class="metric-value">60%</p>
+    <h3>less input overwhelm</h3>
+     <p>
+      Setup felt easier to follow
+Beta users found the simulation setup clearer after dense motor parameters were split into guided stages.
+    </p>
+  </article>
+
+  <article class="metric-card metric-card-featured">
+    <p class="metric-value">2×</p>
+    <h3>faster first simulation</h3>
+    <p>
+      Blank-start friction reduced
+Sample vehicles and default values helped new users reach their first simulation run faster.</p>
+  </article>
+
+  <article class="metric-card">
+    <p class="metric-value"> <20% </p>
+    <h3>input doubts</h3>
+    <p>
+      Inline parameter guidance
+Info buttons reduced student confusion by explaining each parameter directly at the point of input.
+    </p>
+  </article>
+</div>
       </section>
 
+      <!-- REFLECTION -->
       <section class="section shell reflection" id="reflection">
-        <p class="section-kicker">04 — Takeaways</p>
-        <h2>What this project <strong>taught me</strong></h2>
+        <p class="section-kicker">07 — Reflection</p>
+
+        <h2>Complexity needs structure</h2>
+
         <div class="quote-block">
           <p>
-            Being in charge of this product from the very first user interview to the printed
-            retail label gave me something no single-deliverable project could: a complete
-            experience of the product lifecycle. Research shaped the structure. Structure shaped
-            the app. The app's visual language shaped the brochure. The brochure shaped the
-            packaging. Every touchpoint was connected, and I connected them.
+            This project taught me that complex products do not become usable by hiding complexity. They become
+            usable when the complexity is structured clearly.
+          </p>
+
+          <p>
+            Designing Pi-CADS also taught me to work closely with engineers, understand unfamiliar technical terms,
+            and turn dense product logic into workflows that users can actually move through.
           </p>
         </div>
       </section>
     </main>
+
     <script>
-  const caseTocLinks = document.querySelectorAll(".case-toc-link");
-  const caseTocSections = document.querySelectorAll(
-    "#overview, #research, #process, #prototype, #redesign, #physical, #reflection"
-  );
+      const caseTocLinks = document.querySelectorAll(".case-toc-link");
+      const caseTocSections = document.querySelectorAll(
+        "#overview, #problem, #solution, #screens, #decisions, #outcome, #reflection"
+      );
 
-  function setCaseTocActive(id) {
-    caseTocLinks.forEach((link) => {
-      link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
-    });
-  }
+      function setCaseTocActive(id) {
+        caseTocLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+        });
+      }
 
-  const caseTocObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setCaseTocActive(entry.target.id);
+      const caseTocObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setCaseTocActive(entry.target.id);
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "-35% 0px -55% 0px",
+          threshold: 0
         }
+      );
+
+      caseTocSections.forEach((section) => {
+        caseTocObserver.observe(section);
       });
-    },
-    {
-      root: null,
-      rootMargin: "-35% 0px -55% 0px",
-      threshold: 0
-    }
-  );
+    </script>
 
-  caseTocSections.forEach((section) => {
-    caseTocObserver.observe(section);
-  });
-</script>
-<script>
-  const mainNav = document.getElementById("nav");
+    <script>
+      const mainNav = document.getElementById("nav");
 
-  window.addEventListener(
-    "scroll",
-    () => mainNav.classList.toggle("scrolled", scrollY > 8),
-    { passive: true }
-  );
+      window.addEventListener(
+        "scroll",
+        () => mainNav.classList.toggle("scrolled", scrollY > 8),
+        { passive: true }
+      );
 
-  const hamburger = document.getElementById("navHamburger");
-  const drawer = document.getElementById("navDrawer");
-  const overlay = document.getElementById("navOverlay");
-  const closeBtn = document.getElementById("navDrawerClose");
+      const hamburger = document.getElementById("navHamburger");
+      const drawer = document.getElementById("navDrawer");
+      const overlay = document.getElementById("navOverlay");
+      const closeBtn = document.getElementById("navDrawerClose");
 
-  function openDrawer() {
-    drawer.classList.add("open");
-    overlay.classList.add("open");
-    hamburger.classList.add("active");
-  }
+      function openDrawer() {
+        drawer.classList.add("open");
+        overlay.classList.add("open");
+        hamburger.classList.add("active");
+      }
 
-  function closeDrawer() {
-    drawer.classList.remove("open");
-    overlay.classList.remove("open");
-    hamburger.classList.remove("active");
-  }
+      function closeDrawer() {
+        drawer.classList.remove("open");
+        overlay.classList.remove("open");
+        hamburger.classList.remove("active");
+      }
 
-  hamburger.addEventListener("click", openDrawer);
-  closeBtn.addEventListener("click", closeDrawer);
-  overlay.addEventListener("click", closeDrawer);
-</script>
+      hamburger.addEventListener("click", openDrawer);
+      closeBtn.addEventListener("click", closeDrawer);
+      overlay.addEventListener("click", closeDrawer);
+    </script>
   </body>
 </html>

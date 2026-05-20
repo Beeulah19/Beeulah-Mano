@@ -48,19 +48,18 @@
 </div>
 
     <aside class="case-toc" aria-label="On this page">
-  <p class="case-toc-title">On this page</p>
+  <div class="case-toc-header">
+    <h3 class="case-toc-project">Heat Pump Dashboard</h3>
+    <p class="case-toc-title">On this page</p>
+  </div>
 
   <nav class="case-toc-nav">
     <a class="case-toc-link is-active" href="#overview">Overview</a>
     <a class="case-toc-link" href="#problem">Problem</a>
-
-    <div class="case-toc-sub">
-      <a class="case-toc-link case-toc-child" href="#preview">Dashboard preview</a>
-      <a class="case-toc-link case-toc-child" href="#decisions">Design decisions</a>
-    </div>
-
-    <a class="case-toc-link" href="#impact">Impact</a>
-    <a class="case-toc-link" href="#reflection">Reflection</a>
+    <a class="case-toc-link" href="#preview">Dashboard preview</a>
+    <a class="case-toc-link" href="#decisions">Design decisions</a>
+    <a class="case-toc-link" href="#impact">Impact & Reflection</a>
+    
   </nav>
 </aside>
     <main class="case-study">
@@ -73,9 +72,12 @@
 
         <dl class="project-meta">
           <div>
-            <dt>Role</dt>
-            <dd>UI/UX Designer</dd>
-          </div>
+  <dt>Role</dt>
+  <dd>
+    UI/UX Designer
+    <span class="role-subtext">Sole designer · Research to handoff</span>
+  </dd>
+</div>
           <div>
             <dt>Platform</dt>
             <dd>Embedded display</dd>
@@ -106,88 +108,137 @@
       </section>
 
       <section class="section shell" id="decisions">
-        <p class="section-kicker">02 — Design decisions</p>
-        <h2>Three choices that <strong>defined the screen</strong></h2>
+  <p class="section-kicker">02 — Design decisions</p>
+  <h2>Three choices that <strong>defined the screen</strong></h2>
 
-        <div class="choice-list">
-          <article class="choice-card">
-            <div class="choice-body">
-              <span class="dot"></span>
-              <div>
-                <h3>Hierarchy by impact, not engineering order</h3>
-                <p>
-                  COP and cumulative savings were made visually dominant because they communicated the clearest performance and impact story. Raw engineering values remained visible but secondary.
-                </p>
-              </div>
-            </div>
-            <div class="choice-note muted">
-              <b>Rejected</b>
-              <p>An equal-weight grid where every metric had the same visual importance.</p>
-            </div>
-            <!-- <div class="choice-note accent">
-              <b>Why</b>
-              <p>In 3 seconds, a person can read one number. That number should be the most important one.</p>
-            </div> -->
-          </article>
+  <div class="choice-list">
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Led with system value, not system data</h3>
+          <p>
+            The dashboard leads with COP and cumulative savings because they answer the user’s first question:
 
-          <article class="choice-card">
-            <div class="choice-body">
-              <span class="dot"></span>
-              <div>
-                <h3>Designed for distance</h3>
-                <p>
-                  The screen was designed for people standing 1–2 metres away, not sitting at a desk. Large numbers, clear spacing, and grouped cards helped users scan the dashboard quickly.  
-                   </p>
-              </div>
-            </div>
-            <div class="choice-note muted">
-              <b>Rejected</b>
-              <p>A dense dashboard layout with smaller labels and more detailed values.</p>
-            </div>
-            <!-- <div class="choice-note accent">
-              <b>Why</b>
-              <p>Familiarity lowers cognitive load. When the visual language matches what people already know, they trust the data faster.</p>
-            </div> -->
-          </article>
-
-          <article class="choice-card">
-            <div class="choice-body">
-              <span class="dot"></span>
-              <div>
-                <h3>Familiar visual language</h3>
-                <p>
-                  I used a clean card-based interface with soft translucent surfaces to make the technical data feel approachable for a mixed audience.
-                </p>
-              </div>
-            </div>
-            <div class="choice-note muted">
-              <b>Rejected</b>
-              <p>Opaque industrial metric tiles that felt functional but less inviting for non-technical viewers.</p>
-            </div>
-            <!-- <div class="choice-note accent">
-              <b>Why</b>
-              <p>An always-on ambient display has one job - communicate instantly without anyone touching it.</p>
-            </div> -->
-          </article>
+          <strong>  “Is the system performing well, and is it creating measurable value?”</strong>
+          </p>
+          <p>
+            Instead of starting with raw sensor readings, the screen begins with the metrics that turn system behaviour into a clear performance story.
+          </p>
         </div>
-      </section>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          A sensor-first dashboard that showed all engineering values upfront and left users to interpret the outcome themselves.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Used a visual anchor for performance understanding</h3>
+          <p>
+            COP is not shown as a number alone. The gauge gives the value context by showing its position within a performance range.
+          </p>
+          <p>
+            The large 5.5 Instantaneous COP supports precision, while the gauge helps users understand direction and performance quality at a glance.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          A simple numeric COP card that was accurate, but lacked range, context, and quick interpretability.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Made business impact impossible to miss</h3>
+          <p>
+            Cumulative savings is treated as a primary metric because it translates technical efficiency into a business outcome.
+          </p>
+          <p>
+            This made the dashboard useful beyond engineering users. A facility manager, business owner, or stakeholder could immediately understand what the system was contributing without needing to decode technical readings.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          Placing savings below engineering values, which would make the system’s business impact feel secondary.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
 
       <section class="impact shell" id="impact">
-        <div>
-          <p class="section-kicker">03 — Impact</p>
-          <h2>Numbers that <strong>tell a real story</strong></h2>
-          <div class="impact-copy">
-            The heat pump replaced a fuel-based heating process with a more efficient system and it was installed as a live always-on display at Zoho, Tenkasi  campus. It helped make heat pump performance and energy savings visible in real time.
-        </div>
-        </div>
-        <figure class="photo-card">
-          <img src="assets/impact-roomimg.svg" alt="People viewing the heat pump dashboard in a room" />
-        </figure>
-      </section>
+  <div>
+    <p class="section-kicker">03 — Impact</p>
+    <h2>Numbers that <strong>tell a real story</strong></h2>
+    <div class="impact-copy">
+      The heat pump replaced a fuel-based heating process with a more efficient system.
+      The dashboard was installed as a live always-on display at Zoho’s Tenkasi campus,
+      helping make heat pump performance and energy savings visible in real time.
+    </div>
+  </div>
 
-      <figure class="wide-photo shell">
-        <img src="assets/installed-dashboardimg.svg" alt="Installed Pilabz heat pump dashboard on a wall" />
-      </figure>
+  <figure class="photo-card">
+    <img src="assets/impact-roomimg.svg" alt="People viewing the heat pump dashboard in a room" />
+  </figure>
+</section>
+
+<section class="impact-metrics shell">
+  <div class="evolution-box metrics-note">
+    <p>
+      Metrics are based on internal walk-by readability testing and display reviews
+      with engineers and non-technical viewers. They are usability indicators,
+      not post-launch analytics.
+    </p>
+  </div>
+
+ <div class="metrics-grid metrics-grid-two">
+    <article class="metric-card">
+      <p class="metric-value">80%</p>
+      <h3>first-glance recall</h3>
+      <p>
+        Savings became the remembered metric
+Most viewers recalled the savings value first after it was given the strongest visual weight on the dashboard.
+      </p>
+    </article>
+
+    <article class="metric-card">
+      <p class="metric-value">3 sec</p>
+      <h3>Recognition</h3>
+      <p>
+        Savings story became clear faster
+In walk-by testing, viewers understood the energy-impact story faster after cumulative savings was made visually dominant.
+      </p>
+    </article>
+
+    <!-- <article class="metric-card">
+      <p class="metric-value">1–2 m</p>
+      <h3>Distance readability</h3>
+      <p>
+        Typography, spacing, and hierarchy were checked for people viewing the screen
+        from normal standing distance.
+      </p>
+    </article> -->
+  </div>
+</section>
+
+      
+      
 
       <section class="section shell reflection" id="reflection">
         <p class="section-kicker">04 — Reflection</p>
