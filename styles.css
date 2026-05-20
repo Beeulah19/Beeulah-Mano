@@ -1714,9 +1714,9 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
 @media (max-width: 768px) {
   img {
     image-rendering: auto;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    /* transform: translateZ(0); */
+    /* backface-visibility: hidden; */
+    /* -webkit-backface-visibility: hidden; */
   }
 
   .hero-right img,
@@ -1735,5 +1735,33 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
   .tool-pill:hover {
     transform: none !important;
     filter: none !important;
+  }
+}
+
+/* ============================================
+   MOBILE IMAGE BLUR FIX
+   Remove transform from revealed image sections
+   ============================================ */
+
+@media (max-width: 768px) {
+  .reveal,
+  .reveal.in {
+    transform: none !important;
+  }
+
+  .work-card,
+  .work-img,
+  .aboutme-photo-box,
+  .aboutme-photo-box img,
+  .offscreen-img-card,
+  .offscreen-img-card img,
+  .hero-right,
+  .hero-right img,
+  .cta-sig,
+  .cta-sig img {
+    transform: none !important;
+    filter: none !important;
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
   }
 }

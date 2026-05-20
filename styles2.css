@@ -1921,3 +1921,29 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
     filter: none !important;
   }
 }
+
+/* ============================================
+   MOBILE IMAGE BLUR FIX — CASE STUDIES
+   ============================================ */
+
+@media (max-width: 768px) {
+  .reveal,
+  .reveal.in {
+    transform: none !important;
+  }
+
+  img,
+  figure,
+  .photo-card,
+  .wide-photo,
+  .image-pair,
+  .dashboard-shell,
+  .astra-robot-card,
+  .astra-screens-panel,
+  .astra-wire-grid {
+    transform: none !important;
+    filter: none !important;
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+  }
+}
