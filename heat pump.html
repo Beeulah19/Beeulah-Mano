@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="styles2.css" />
   </head>
   <body>
+    <div class="custom-cursor" id="customCursor"></div>
     <!-- MAIN NAV -->
 <nav id="nav">
   <a href="index.html" class="nav-logo">
@@ -215,8 +217,7 @@
       <p class="metric-value">80%</p>
       <h3>first-glance recall</h3>
       <p>
-        Savings became the remembered metric
-Most viewers recalled the savings value first after it was given the strongest visual weight on the dashboard.
+        Savings became the remembered metric. Most viewers recalled the savings value first after it was given the strongest visual weight on the dashboard.
       </p>
     </article>
 
@@ -224,8 +225,7 @@ Most viewers recalled the savings value first after it was given the strongest v
       <p class="metric-value">3 sec</p>
       <h3>Recognition</h3>
       <p>
-        Savings story became clear faster
-In walk-by testing, viewers understood the energy-impact story faster after cumulative savings was made visually dominant.
+        Savings story became clear faster. In walk-by testing, viewers understood the energy-impact story faster after cumulative savings was made visually dominant.
       </p>
     </article>
 
@@ -313,6 +313,38 @@ In walk-by testing, viewers understood the energy-impact story faster after cumu
   hamburger.addEventListener("click", openDrawer);
   closeBtn.addEventListener("click", closeDrawer);
   overlay.addEventListener("click", closeDrawer);
+</script>
+<script>
+  const customCursor = document.getElementById("customCursor");
+
+  if (customCursor) {
+    window.addEventListener("mousemove", (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+
+    const hoverTargets = document.querySelectorAll(
+      "a, button, .case-toc-link, .nav-resume"
+    );
+
+    hoverTargets.forEach((target) => {
+      target.addEventListener("mouseenter", () => {
+        customCursor.classList.add("is-hovering");
+      });
+
+      target.addEventListener("mouseleave", () => {
+        customCursor.classList.remove("is-hovering");
+      });
+    });
+
+    document.addEventListener("mouseleave", () => {
+      customCursor.classList.add("is-hidden");
+    });
+
+    document.addEventListener("mouseenter", () => {
+      customCursor.classList.remove("is-hidden");
+    });
+  }
 </script>
   </body>
 </html>

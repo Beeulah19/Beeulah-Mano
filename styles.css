@@ -41,7 +41,7 @@ nav {
   justify-content: space-between;
   padding: 0 60px;
   height: 64px;
-  background: rgba(250, 248, 244, 0.95);
+  background: var(--off-white);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
@@ -89,7 +89,7 @@ nav.scrolled {
 
 .nav-resume {
   background: var(--teal) !important;
-  color: #fff !important;
+  color: var(--off-white) !important;
   padding: 9px 22px;
   border-radius: 100px;
   font-weight: 600 !important;
@@ -352,7 +352,7 @@ nav.scrolled {
 .work-title {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--off-white);
   letter-spacing: -0.02em;
   margin-bottom: 4px;
 }
@@ -574,7 +574,7 @@ nav.scrolled {
 
 .offscreen-toggle:hover {
   background: var(--teal);
-  color: #fff;
+  color: var(--off-white);
   transform: translateY(-2px);
 }
 
@@ -685,7 +685,7 @@ nav.scrolled {
   right: 14px;
   bottom: 14px;
   z-index: 2;
-  color: #fff;
+  color: var(--off-white);
   opacity: 0;
   transform: translateY(10px);
   transition:
@@ -728,7 +728,7 @@ nav.scrolled {
 }
 
 .aboutme-top > .reveal {
-  background-color: #FEFBF6;
+  background-color: var(--off-white);
   padding: 10px;
 }
 
@@ -847,7 +847,7 @@ nav.scrolled {
   white-space: nowrap;
 
   background: #1A6B58;
-  color: #fff;
+  color: var(--off-white);
   font-family: 'Host Grotesk', sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -891,7 +891,7 @@ nav.scrolled {
 
 .tool-pill:hover {
   transform: translateY(-3px);
-  /* background: #fff; */
+  /* background: var(--off-white); */
   border-color: rgba(26, 107, 88, 0.28);
   box-shadow: none;
 }
@@ -966,6 +966,18 @@ nav.scrolled {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
+.cta-btn-mail {
+  background: var(--off-white);
+  color: var(--teal);
+  border-color: var(--off-white);
+  font-weight: 600;
+}
+
+.cta-btn-mail:hover {
+  background: var(--off-white);
+  color: var(--teal-dark);
+  border-color: var(--off-white);
+}
 /* ============================================
    MARQUEE
    ============================================ */
@@ -1084,7 +1096,7 @@ nav.scrolled {
   right: -300px;
   width: 300px;
   height: 100vh;
-  background: #fff;
+  background: var(--off-white);
   padding: 80px 30px;
   transition: 0.35s ease;
   z-index: 1000;
@@ -1329,7 +1341,7 @@ button {
   left: 0;
   width: 18px;
   height: 18px;
-  border: 2px solid #066E61;
+  border: 2px solid var(--teal);
   fill: var(--teal);
   border-radius: 50%;
   pointer-events: none;
@@ -1344,10 +1356,10 @@ button {
 }
 
 .custom-cursor.is-hovering {
-  width: 42px;
-  height: 42px;
-  background: rgba(6, 110, 97, 0.08);
-  border-color: rgba(6, 110, 97, 0.45);
+  width: 30px;
+  height: 30px;
+  background: rgba(26, 107, 88, 0.08);
+  border-color: rgba(26, 107, 88, 0.45);
 }
 
 .custom-cursor.is-hidden {
@@ -1359,3 +1371,106 @@ button {
     display: none;
   }
 }
+
+/* ============================================
+   MOBILE PRESS / TAP STATES — VISIBLE VERSION
+   Main page only
+   ============================================ */
+
+@media (max-width: 760px) {
+  a,
+  button,
+  .work-card,
+  .offscreen-toggle,
+  .cta-btn,
+  .nav-hamburger,
+  .nav-drawer-close,
+  .nav-drawer-links a {
+    -webkit-tap-highlight-color: rgba(26, 107, 88, 0.16);
+    touch-action: manipulation;
+  }
+
+  .nav-hamburger:active,
+  .nav-drawer-close:active {
+    background: rgba(26, 107, 88, 0.12) !important;
+    border-radius: 999px;
+    transform: scale(0.92);
+  }
+
+  .nav-drawer-links a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+
+  .nav-drawer-links a:active {
+    background: rgba(26, 107, 88, 0.12) !important;
+    color: var(--teal) !important;
+    transform: translateX(4px);
+  }
+
+  .work-card {
+    transform: translateZ(0);
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease,
+      filter 0.12s ease;
+  }
+
+  .work-card:active {
+    transform: scale(0.97) !important;
+    filter: brightness(0.88) saturate(1.05);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  }
+
+  .offscreen-toggle:active {
+    background: var(--teal) !important;
+    color: var(--off-white) !important;
+    border-color: var(--teal) !important;
+    transform: scale(0.97) !important;
+  }
+
+  .cta-btn:active {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border-color: rgba(255, 255, 255, 0.85) !important;
+    transform: scale(0.97);
+  }
+
+  .nav-resume:active {
+    background: var(--teal-dark) !important;
+    transform: scale(0.96);
+  }
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+/* ============================================
+   CUSTOM CURSOR — CONTRAST ON DARK / TEAL AREAS
+   Keep this at the very bottom of styles.css
+   ============================================ */
+
+body:has(.nav-resume:hover) .custom-cursor,
+body:has(.work-info:hover) .custom-cursor,
+body:has(.offscreen-toggle:hover) .custom-cursor,
+body:has(.cta-section:hover) .custom-cursor,
+body:has(.cta-btn:hover) .custom-cursor
+body:has(.cta-btn-mail:hover) .custom-cursor {
+  border-color: var(--off-white);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+body:has(.nav-resume:hover) .custom-cursor.is-hovering,
+body:has(.work-info:hover) .custom-cursor.is-hovering,
+body:has(.offscreen-toggle:hover) .custom-cursor.is-hovering,
+body:has(.cta-section:hover) .custom-cursor.is-hovering,
+body:has(.cta-btn:hover) .custom-cursor.is-hovering {
+  border-color: var(--off-white);
+  background: rgba(255, 255, 255, 0.22);
+}
+

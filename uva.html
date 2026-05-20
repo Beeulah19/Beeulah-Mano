@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="styles2.css" />
   </head>
   <body>
+    <div class="custom-cursor" id="customCursor"></div>
     <!-- MAIN NAV -->
 <nav id="nav">
   <a href="index.html" class="nav-logo">
@@ -68,14 +70,16 @@
     
   </nav>
 </aside>
-    <main class="case-study">
+    <main class="case-study uva-case">
       
 
       <header class="hero shell" id="overview">
         <p class="eyebrow"><span></span> End-to-end product design · Android app · Instrumentation </p>
         <h1>Pilabz UVA</h1>
         <p class="lede">
-          UVA is a wireless electrical measurement instrument that combines DMM, LCR, 1-phase PQA, and 3-phase PQA into one device. Instead of placing the screen on the hardware, UVA moves the measurement interface to an Android phone or tablet.</p><br>
+          UVA is a wireless electrical measurement instrument that combines DMM, LCR, 1-phase PQA, and 3-phase PQA into one device. Instead of placing the screen on the hardware, UVA moves the measurement interface to an Android phone or tablet.
+        </p>
+        <p class="lede">
           As the only designer on the product, I owned the core app experience from research to final UI, and also extended the design language into supporting deliverables like brochure and packaging labels for beta release.
         </p>
 
@@ -213,13 +217,14 @@
           <p>
             That meant the UI had to behave with the same discipline as physical instrumentation: predictable zones, minimal interruption, clear state, large readings, and immediate access to measurement actions.
           </p>
-          <div class="choice-note muted">
+        </div>
+      </div>
+
+      <div class="choice-note muted">
         <b>Rejected</b>
         <p>
           A generic mobile app structure that treated measurement as content instead of an active instrument workflow.
         </p>
-      </div>
-        </div>
       </div>
     </article>
 
@@ -429,6 +434,38 @@
   hamburger.addEventListener("click", openDrawer);
   closeBtn.addEventListener("click", closeDrawer);
   overlay.addEventListener("click", closeDrawer);
+</script>
+<script>
+  const customCursor = document.getElementById("customCursor");
+
+  if (customCursor) {
+    window.addEventListener("mousemove", (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+
+    const hoverTargets = document.querySelectorAll(
+      "a, button, .case-toc-link, .nav-resume"
+    );
+
+    hoverTargets.forEach((target) => {
+      target.addEventListener("mouseenter", () => {
+        customCursor.classList.add("is-hovering");
+      });
+
+      target.addEventListener("mouseleave", () => {
+        customCursor.classList.remove("is-hovering");
+      });
+    });
+
+    document.addEventListener("mouseleave", () => {
+      customCursor.classList.add("is-hidden");
+    });
+
+    document.addEventListener("mouseenter", () => {
+      customCursor.classList.remove("is-hidden");
+    });
+  }
 </script>
   </body>
 </html>

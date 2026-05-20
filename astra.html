@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="styles2.css" />
   </head>
   <body>
+    <div class="custom-cursor" id="customCursor"></div>
     <!-- MAIN NAV -->
     <nav id="nav">
       <a href="index.html" class="nav-logo">
@@ -101,7 +103,7 @@
       </header>
 
       <!-- OVERVIEW -->
-      <section class="section shell astra-overview" id="overview">
+      <section class="section shell astra-overview" id="overview-content">
   <p class="section-kicker">01 — Overview</p>
   <h2>Software for a machine that moves</h2>
 
@@ -275,8 +277,8 @@
 
           <article>
             <p class="section-kicker">02</p>
-            <h3>Robot health panel</h3>
-            <p>Shows battery, signal sensors, motor status, and last sync</p>
+            <h3>Pre-mission checklist</h3>
+            <p>Confirms map, battery, signal, and mission readiness before movement</p>
             <img src="assets/ASTRA/UX2.svg" alt="Pre-mission checklist wireframe" />
           </article>
 
@@ -338,7 +340,8 @@
     <p class="metric-value">70%</p>
     <h3>Less hesitation</h3>
     <p>
-      Failure recovery felt clearer In lost-signal testing, engineers chose the next safe action faster after last known position, mission status, and recovery actions were grouped together.
+      Failure recovery felt clearer. In lost-signal testing, engineers chose the next safe action faster after last known position, mission status, and recovery actions were grouped together.
+    </p>
   </article>
 
   <article class="metric-card">
@@ -427,5 +430,37 @@
       closeBtn.addEventListener("click", closeDrawer);
       overlay.addEventListener("click", closeDrawer);
     </script>
+    <script>
+  const customCursor = document.getElementById("customCursor");
+
+  if (customCursor) {
+    window.addEventListener("mousemove", (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+
+    const hoverTargets = document.querySelectorAll(
+      "a, button, .case-toc-link, .nav-resume"
+    );
+
+    hoverTargets.forEach((target) => {
+      target.addEventListener("mouseenter", () => {
+        customCursor.classList.add("is-hovering");
+      });
+
+      target.addEventListener("mouseleave", () => {
+        customCursor.classList.remove("is-hovering");
+      });
+    });
+
+    document.addEventListener("mouseleave", () => {
+      customCursor.classList.add("is-hidden");
+    });
+
+    document.addEventListener("mouseenter", () => {
+      customCursor.classList.remove("is-hidden");
+    });
+  }
+</script>
   </body>
 </html>
