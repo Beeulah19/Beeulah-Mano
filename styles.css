@@ -1714,22 +1714,25 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
 @media (max-width: 768px) {
   img {
     image-rendering: auto;
+    transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   }
 
+  .hero-right img,
   .work-img,
   .aboutme-photo-box img,
   .offscreen-img-card img,
-  .hero-right img {
-    transform: none !important;
+  .cta-sig img {
+    max-width: 100%;
+    height: auto;
     filter: none !important;
   }
 
+  .work-card:hover,
   .work-card:hover .work-img,
   .offscreen-img-card:hover img,
-  .tool-pill:hover,
-  .work-card:hover {
+  .tool-pill:hover {
     transform: none !important;
     filter: none !important;
   }

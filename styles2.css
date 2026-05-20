@@ -1901,6 +1901,7 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
 @media (max-width: 768px) {
   img {
     image-rendering: auto;
+    transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   }
@@ -1915,7 +1916,8 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
   .astra-screens-panel img,
   .astra-wire-grid img,
   .shipped-screens img {
-    transform: none !important;
+    max-width: 100%;
+    height: auto;
     filter: none !important;
   }
 }
