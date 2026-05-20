@@ -386,7 +386,7 @@ nav.scrolled {
    ============================================ */
 .career-section {
   background: var(--cream);
-  padding: 80px 60px;
+  padding: 40px 60px;
 }
 
 .career-grid {
@@ -474,6 +474,50 @@ nav.scrolled {
   margin-bottom: 0;
 }
 
+/* Career layout — role + content paired */
+.career-list {
+  display: grid;
+  gap: 0;
+  margin-top: 40px;
+}
+
+.career-item {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  padding: 36px 0;
+  border-top: 1px solid var(--border);
+}
+
+.career-item:first-child {
+  border-top: 0;
+}
+
+.career-item .career-entry {
+  padding: 0;
+}
+
+.career-item .career-desc-block {
+  padding: 0;
+  border-top: 0;
+}
+
+@media (max-width: 768px) {
+  .career-list {
+    margin-top: 28px;
+  }
+
+  .career-item {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 34px 0;
+  }
+
+  .career-item + .career-item {
+    border-top: 1px solid var(--border);
+  }
+}
+
 /* ============================================
    ABOUT ME SECTION
    ============================================ */
@@ -540,7 +584,7 @@ nav.scrolled {
   font-family: 'Host Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: var(--teal);
+  color: var(--text-dark);
   margin-bottom: 14px;
 }
 
@@ -1474,3 +1518,191 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
   background: rgba(255, 255, 255, 0.22);
 }
 
+/* ============================================
+   OFFSCREEN MOBILE GALLERY — FINAL
+   2x2 same size + caption inside + better image fit
+   ============================================ */
+
+@media (max-width: 768px) {
+  .offscreen-panel.open {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .offscreen-gallery-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap: 16px !important;
+  }
+
+  .offscreen-img-card {
+    position: relative;
+    overflow: hidden !important;
+    height: 190px;
+    border-radius: 0;
+    background: var(--teal);
+  }
+
+  .offscreen-img-card img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top;
+    display: block;
+  }
+
+  .offscreen-img-card figcaption {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    opacity: 1 !important;
+    transform: none !important;
+
+    margin: 0 !important;
+    padding: 32px 12px 12px;
+
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .offscreen-img-card figcaption span {
+    display: block;
+    color: #fff !important;
+    font-size: 12px;
+    line-height: 1.35;
+    font-weight: 600;
+  }
+
+  .offscreen-img-card:hover img {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .offscreen-img-card:hover figcaption {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .offscreen-img-card {
+    height: 170px;
+  }
+
+  .offscreen-img-card figcaption span {
+    font-size: 11.5px;
+  }
+}
+
+/* Mobile marquee font size */
+@media (max-width: 768px) {
+  .marquee-wrap {
+    padding: 18px 0;
+  }
+
+  .marquee-content {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .marquee-text {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+  }
+
+  .marquee-pipe {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .marquee-text {
+    font-size: 13px;
+  }
+
+  .marquee-pipe {
+    font-size: 13px;
+  }
+}
+
+/* ============================================
+   ABOUT ME IMAGE MOBILE FIX
+   Prevent image crop on responsive view
+   ============================================ */
+
+@media (max-width: 768px) {
+  .aboutme-photo-box {
+    min-height: auto;
+    height: auto;
+    background: transparent;
+  }
+
+  .aboutme-photo-box img {
+    position: static;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+  }
+}
+
+/* Offscreen mobile image height increase */
+@media (max-width: 768px) {
+  .offscreen-img-card {
+    height: 240px;
+  }
+}
+
+@media (max-width: 430px) {
+  .offscreen-img-card {
+    height: 210px;
+  }
+}
+
+/* ============================================
+   MOBILE FOOTER CTA BUTTON ORDER
+   Mail → Dribbble + Behance → LinkedIn
+   ============================================ */
+
+@media (max-width: 768px) {
+  .cta-btns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* 1st line: Mail full width */
+  .cta-btn-mail {
+    grid-column: 1 / -1;
+    order: 1;
+  }
+
+  /* LinkedIn goes last line */
+  .cta-btns a[href*="linkedin"] {
+    grid-column: 1 / -1;
+    order: 4;
+  }
+
+  /* 2nd line: Behance + Dribbble */
+  .cta-btns a[href*="behance"] {
+    order: 2;
+  }
+
+  .cta-btns a[href*="dribbble"] {
+    order: 3;
+  }
+}
