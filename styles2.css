@@ -1893,3 +1893,29 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
     object-fit: contain !important;
   }
 }
+
+/* ============================================
+   MOBILE IMAGE SHARPNESS FIX — CASE STUDIES
+   ============================================ */
+
+@media (max-width: 768px) {
+  img {
+    image-rendering: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .dashboard-preview-img,
+  .photo-card img,
+  .wide-photo img,
+  .image-pair img,
+  .wide-composite img,
+  .physical-grid img,
+  .astra-robot-card img,
+  .astra-screens-panel img,
+  .astra-wire-grid img,
+  .shipped-screens img {
+    transform: none !important;
+    filter: none !important;
+  }
+}

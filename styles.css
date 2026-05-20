@@ -1706,3 +1706,31 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
     order: 3;
   }
 }
+
+/* ============================================
+   MOBILE IMAGE SHARPNESS FIX — MAIN PAGE
+   ============================================ */
+
+@media (max-width: 768px) {
+  img {
+    image-rendering: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .work-img,
+  .aboutme-photo-box img,
+  .offscreen-img-card img,
+  .hero-right img {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .work-card:hover .work-img,
+  .offscreen-img-card:hover img,
+  .tool-pill:hover,
+  .work-card:hover {
+    transform: none !important;
+    filter: none !important;
+  }
+}
