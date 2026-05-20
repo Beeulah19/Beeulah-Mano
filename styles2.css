@@ -1856,3 +1856,40 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
     display: none;
   }
 }
+ /* ============================================
+   ASTRA OVERVIEW MOBILE FIX
+   Paste at the very bottom of styles2.css
+   ============================================ */
+
+@media (max-width: 900px) {
+  .astra-overview {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .astra-overview > .section-kicker,
+  .astra-overview > h2,
+  .astra-overview-copy,
+  .astra-overview > p:not(.section-kicker),
+  .astra-robot-card {
+    grid-column: 1 / -1 !important;
+  }
+
+  .astra-overview-copy {
+    margin-top: 0 !important;
+  }
+
+  .astra-robot-card {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 4px !important;
+  }
+
+  .astra-robot-card img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+  }
+}
